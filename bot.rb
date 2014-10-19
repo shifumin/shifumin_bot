@@ -8,7 +8,9 @@ require "pass"
 
 class Bot
     include OauthInfo
-   
+
+    USER_NAME = "shifumin_ruby"
+
 
     def initialize
             @con_key = keys[:con_key]
@@ -29,9 +31,23 @@ class Bot
             # ファイルからツイートを読み込み配列に格納する
             tweet = File.read('./tweet.txt').split("\n")
 
+            # 直近のツイートを読み込み配列に格納する
+            rec_tweet = Array.new
+            client.user_timeline(USER_NAME, :count =>10).each do |t|
+            rec_tweet << "#{t.text}"
+            end
+
             # ツイートする。
-            client.update(tweet.sample)
-    
+            client.update((tweet - rec_tweet).sample)
+            
+            # 実験中
+=begin
+            a = Array.new
+            client.followers("shifumin").each do |f|
+            a << "#{f}"
+            end
+            puts client.followers("shifumin")
+=end
     end
 end
 
