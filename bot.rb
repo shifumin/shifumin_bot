@@ -1,5 +1,6 @@
 # -*- encoding: UTF-8 -*-
 
+
 require 'twitter'
 require 'pp'
 $LOAD_PATH << File.dirname(__FILE__)
