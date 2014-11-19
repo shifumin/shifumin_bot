@@ -1,8 +1,9 @@
-# -*- encoding: UTF-8 -*-
+# coding:UTF-8
 
-
+require 'bundler/setup'
 require 'twitter'
 require 'pp'
+
 $LOAD_PATH << File.dirname(__FILE__)
 require "pass"
 
@@ -40,7 +41,8 @@ class Bot
 
             # ツイートする。
             client.update((tweet - rec_tweet).sample)
-            
+            pp client.home_timeline
+
             # 実験中
 =begin
             a = Array.new
@@ -55,6 +57,7 @@ end
 
 bot = Bot.new
 bot.update
+
 
 # client.update("I'm tweeting")
 
