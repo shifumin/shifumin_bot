@@ -40,7 +40,10 @@ class Bot
             end
 
             # ツイートする。
-            pp client.update((tweet - rec_tweet).sample)
+            new_tweet = (tweet - rec_tweet).sample
+            client.update(new_tweet)
+            pp new_tweet
+
 
             # 実験中
 =begin
