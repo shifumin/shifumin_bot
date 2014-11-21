@@ -11,7 +11,7 @@ require "pass"
 class Bot
     include OauthInfo
 
-    USER_NAME = "shifumin_ruby"
+    USER_NAME = "shifumin_bot"
 
 
     def initialize
@@ -40,8 +40,7 @@ class Bot
             end
 
             # ツイートする。
-            client.update((tweet - rec_tweet).sample)
-            pp client.home_timeline
+            pp client.update((tweet - rec_tweet).sample)
 
             # 実験中
 =begin
