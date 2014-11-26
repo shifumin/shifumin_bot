@@ -35,7 +35,7 @@ class Bot
 
             # 直近のツイートを読み込み配列に格納する
             rec_tweet = Array.new
-            client.user_timeline(USER_NAME, :count =>10).each do |t|
+            client.user_timeline(USER_NAME, :count =>12).each do |t|
             rec_tweet << "#{t.text}"
             end
 
