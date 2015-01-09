@@ -14,7 +14,8 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     multipart-post (2.0.0)
     naught (1.0.0)
-    simple_oauth (0.3.0)
+    pass (0.0.2)
+    simple_oauth (0.3.1)
     thread_safe (0.3.4)
     twitter (5.13.0)
       addressable (~> 2.3)
@@ -32,4 +33,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  pass
   twitter

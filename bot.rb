@@ -4,8 +4,7 @@ require 'bundler/setup'
 require 'twitter'
 require 'pp'
 
-$LOAD_PATH << File.dirname(__FILE__)
-require "pass"
+require_relative 'pass'
 
 
 class Bot
