@@ -1,5 +1,6 @@
 # coding:UTF-8
 
+require 'rubygems'
 require 'bundler/setup'
 require 'twitter'
 require 'pp'
